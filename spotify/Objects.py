@@ -126,6 +126,26 @@ class Artist:
         self.type = type
         self.uri = uri
 
+class Playlist:
+    def __init__(self, collaborative:bool=None, description:str = None, external_urls = None, followers = None, href:str = None, id:str = None, images = None, name:str = None, owner = None, public:bool = None, snapshot_id:str = None, tracks = None, type:Literal['playlist'] = 'playlist', uri:str = None) -> None:
+        "since you can select fields with this one, all fields are optional.s"
+        self.collaborative = collaborative
+        self.description = description
+        self.external_urls = external_urls
+        self.followers = followers
+        self.href = href
+        self.id = id
+        if images:
+            self.images = [Image(**i) for i in images]
+        else:
+            self.images = [None]
+        self.name = name
+        self.owner = owner
+        self.public = public
+        self.snapshot_id = snapshot_id
+        self.tracks = tracks
+        self.type = type
+        self.uri = uri
 class Device:
     def __init__(self, id:str, is_active:bool, is_private_session:bool, is_restricted:bool, name:str, supports_volume:bool, type:Literal['Computer','Smartphone','Speaker'], volume_percent:int):
         self.id = id

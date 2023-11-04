@@ -2,6 +2,7 @@ from spotipy import Spotify, SpotifyStateError, SpotifyOauthError, SpotifyExcept
 from os import getenv
 from dotenv import load_dotenv
 from ..spotify import Objects
+from typing import Literal
 import warnings
 load_dotenv()
 
@@ -23,3 +24,23 @@ class Client:
             return None
         except SpotifyException as s:
             warnings.warn("Could not get current playback information! Details:\n%s (HTTP %d)" % (s.msg,s.code))
+
+    def get_context_by_uri(self, uri:str, content_type:Literal['album','artist','playlist','show']):
+        ctx, rt = None, None
+        match content_type:
+            case 'album':
+                ctx = self.client.album(uri)
+                rt = Objects.Album
+            case 'artist':
+                ctx = self.client.artist(uri)
+                rt = Objects.Artist
+            case 'playlist':
+                ctx = self.client.playlist(uri)
+                rt = Objects.Playlist
+            case 'show':
+                ctx = self.client.show(uri)
+                rt = Objects.Show
+            case _:
+                rt = None
+        if ctx and rt: return rt(**ctx)
+        else: return None
