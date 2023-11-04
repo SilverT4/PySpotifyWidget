@@ -17,14 +17,18 @@ match platform.system():
     case _:
         cacheDir = os.path.join(os.path.dirname(__file__),".cache")
 
+if not os.path.exists(cacheDir):
+    os.mkdir(cacheDir)
+
 def downloadImage(url):
     dest = os.path.join(cacheDir,os.path.basename(url))
     try:
-        urlretrieve(url,)
+        print("attempting to retrieve",url)
+        urlretrieve(url,dest)
         return dest
     except error.HTTPError:
         return None
 
 def toTkImage(fname:str, widg):
-    img = Image.open(fname).resize((64,64))
+    img = Image.open(fname).resize((96,96))
     widg.paste(img)
