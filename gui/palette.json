@@ -1,0 +1,494 @@
+{
+    "gray": [
+        "gray60",
+        "gray70",
+        "gray80",
+        "gray85",
+        "gray90",
+        "gray95"
+    ],
+    "white": {
+        "snow": [
+            "snow1",
+            "snow2",
+            "snow3",
+            "snow4"
+        ],
+        "seashell": [
+            "seashell1",
+            "seashell2",
+            "seashell3",
+            "seashell4"
+        ],
+        "AntiqueWhite": [
+            "AntiqueWhite1",
+            "AntiqueWhite2",
+            "AntiqueWhite3",
+            "AntiqueWhite4"
+        ],
+        "bisque": [
+            "bisque1",
+            "bisque2",
+            "bisque3",
+            "bisque4"
+        ],
+        "PeachPuff": [
+            "PeachPuff1",
+            "PeachPuff2",
+            "PeachPuff3",
+            "PeachPuff4"
+        ],
+        "NavajoWhite": [
+            "NavajoWhite1",
+            "NavajoWhite2",
+            "NavajoWhite3",
+            "NavajoWhite4"
+        ],
+        "LemonChiffon": [
+            "LemonChiffon1",
+            "LemonChiffon2",
+            "LemonChiffon3",
+            "LemonChiffon4"
+        ],
+        "cornsilk": [
+            "cornsilk1",
+            "cornsilk2",
+            "cornsilk3",
+            "cornsilk4"
+        ],
+        "ivory": [
+            "ivory1",
+            "ivory2",
+            "ivory3",
+            "ivory4"
+        ],
+        "honeydew": [
+            "honeydew1",
+            "honeydew2",
+            "honeydew3",
+            "honeydew4"
+        ],
+        "LavenderBlush": [
+            "LavenderBlush1",
+            "LavenderBlush2",
+            "LavenderBlush3",
+            "LavenderBlush4"
+        ],
+        "MistyRose": [
+            "MistyRose1",
+            "MistyRose2",
+            "MistyRose3",
+            "MistyRose4"
+        ],
+        "azure": [
+            "azure1",
+            "azure2",
+            "azure3",
+            "azure4"
+        ]
+    },
+    "blue": {
+        "SlateBlue": [
+            "SlateBlue1",
+            "SlateBlue2",
+            "SlateBlue3",
+            "SlateBlue4"
+        ],
+        "RoyalBlue": [
+            "RoyalBlue1",
+            "RoyalBlue2",
+            "RoyalBlue3",
+            "RoyalBlue4"
+        ],
+        "blue": [
+            "blue1",
+            "blue2",
+            "blue3",
+            "blue4"
+        ],
+        "DodgerBlue": [
+            "DodgerBlue1",
+            "DodgerBlue2",
+            "DodgerBlue3",
+            "DodgerBlue4"
+        ],
+        "SteelBlue": [
+            "SteelBlue1",
+            "SteelBlue2",
+            "SteelBlue3",
+            "SteelBlue4"
+        ],
+        "DeepSkyBlue": [
+            "DeepSkyBlue1",
+            "DeepSkyBlue2",
+            "DeepSkyBlue3",
+            "DeepSkyBlue4"
+        ],
+        "SkyBlue": [
+            "SkyBlue1",
+            "SkyBlue2",
+            "SkyBlue3",
+            "SkyBlue4"
+        ],
+        "LightSkyBlue": [
+            "LightSkyBlue1",
+            "LightSkyBlue2",
+            "LightSkyBlue3",
+            "LightSkyBlue4"
+        ]
+    },
+    "grayish-blue": {
+        "SlateGray": [
+            "SlateGray1",
+            "SlateGray2",
+            "SlateGray3",
+            "SlateGray4"
+        ],
+        "LightSteelBlue": [
+            "LightSteelBlue1",
+            "LightSteelBlue2",
+            "LightSteelBlue3",
+            "LightSteelBlue4"
+        ],
+        "LightBlue": [
+            "LightBlue1",
+            "LightBlue2",
+            "LightBlue3",
+            "LightBlue4"
+        ],
+        "LightCyan": [
+            "LightCyan1",
+            "LightCyan2",
+            "LightCyan3",
+            "LightCyan4"
+        ]
+    },
+    "turquoise": {
+        "PaleTurquoise": [
+            "PaleTurquoise1",
+            "PaleTurquoise2",
+            "PaleTurquoise3",
+            "PaleTurquoise4"
+        ],
+        "CadetBlue": [
+            "CadetBlue1",
+            "CadetBlue2",
+            "CadetBlue3",
+            "CadetBlue4"
+        ],
+        "turquoise": [
+            "turquoise1",
+            "turquoise2",
+            "turquoise3",
+            "turquoise4"
+        ],
+        "cyan": [
+            "cyan1",
+            "cyan2",
+            "cyan3",
+            "cyan4"
+        ]
+    },
+    "green": {
+        "DarkSlateGray": [
+            "DarkSlateGray1",
+            "DarkSlateGray2",
+            "DarkSlateGray3",
+            "DarkSlateGray4"
+        ],
+        "aquamarine": [
+            "aquamarine1",
+            "aquamarine2",
+            "aquamarine3",
+            "aquamarine4"
+        ],
+        "DarkSeaGreen": [
+            "DarkSeaGreen1",
+            "DarkSeaGreen2",
+            "DarkSeaGreen3",
+            "DarkSeaGreen4"
+        ],
+        "SeaGreen": [
+            "SeaGreen1",
+            "SeaGreen2",
+            "SeaGreen3",
+            "SeaGreen4"
+        ],
+        "PaleGreen": [
+            "PaleGreen1",
+            "PaleGreen2",
+            "PaleGreen3",
+            "PaleGreen4"
+        ],
+        "SpringGreen": [
+            "SpringGreen1",
+            "SpringGreen2",
+            "SpringGreen3",
+            "SpringGreen4"
+        ],
+        "green": [
+            "green1",
+            "green2",
+            "green3",
+            "green4"
+        ],
+        "chartreuse": [
+            "chartreuse1",
+            "chartreuse2",
+            "chartreuse3",
+            "chartreuse4"
+        ],
+        "OliveDrab": [
+            "OliveDrab1",
+            "OliveDrab2",
+            "OliveDrab3",
+            "OliveDrab4"
+        ],
+        "DarkOliveGreen": [
+            "DarkOliveGreen1",
+            "DarkOliveGreen2",
+            "DarkOliveGreen3",
+            "DarkOliveGreen4"
+        ],
+        "khaki": [
+            "khaki1",
+            "khaki2",
+            "khaki3",
+            "khaki4"
+        ],
+        "LightGoldenrod": [
+            "LightGoldenrod1",
+            "LightGoldenrod2",
+            "LightGoldenrod3",
+            "LightGoldenrod4"
+        ],
+        "LightYellow": [
+            "LightYellow1",
+            "LightYellow2",
+            "LightYellow3",
+            "LightYellow4"
+        ],
+        "yellow": [
+            "yellow1",
+            "yellow2",
+            "yellow3",
+            "yellow4"
+        ],
+        "gold": [
+            "gold1",
+            "gold2",
+            "gold3",
+            "gold4"
+        ]
+    },
+    "orange": {
+        "goldenrod": [
+            "goldenrod1",
+            "goldenrod2",
+            "goldenrod3",
+            "goldenrod4"
+        ],
+        "DarkGoldenrod": [
+            "DarkGoldenrod1",
+            "DarkGoldenrod2",
+            "DarkGoldenrod3",
+            "DarkGoldenrod4"
+        ],
+        "RosyBrown": [
+            "RosyBrown1",
+            "RosyBrown2",
+            "RosyBrown3",
+            "RosyBrown4"
+        ],
+        "IndianRed": [
+            "IndianRed1",
+            "IndianRed2",
+            "IndianRed3",
+            "IndianRed4"
+        ],
+        "sienna": [
+            "sienna1",
+            "sienna2",
+            "sienna3",
+            "sienna4"
+        ],
+        "burlywood": [
+            "burlywood1",
+            "burlywood2",
+            "burlywood3",
+            "burlywood4"
+        ],
+        "wheat": [
+            "wheat1",
+            "wheat2",
+            "wheat3",
+            "wheat4"
+        ],
+        "tan": [
+            "tan1",
+            "tan2",
+            "tan3",
+            "tan4"
+        ],
+        "chocolate": [
+            "chocolate1",
+            "chocolate2",
+            "chocolate3",
+            "chocolate4"
+        ],
+        "firebrick": [
+            "firebrick1",
+            "firebrick2",
+            "firebrick3",
+            "firebrick4"
+        ],
+        "brown": [
+            "brown1",
+            "brown2",
+            "brown3",
+            "brown4"
+        ],
+        "salmon": [
+            "salmon1",
+            "salmon2",
+            "salmon3",
+            "salmon4"
+        ],
+        "LightSalmon": [
+            "LightSalmon1",
+            "LightSalmon2",
+            "LightSalmon3",
+            "LightSalmon4"
+        ],
+        "orange": [
+            "orange1",
+            "orange2",
+            "orange3",
+            "orange4"
+        ],
+        "DarkOrange": [
+            "DarkOrange1",
+            "DarkOrange2",
+            "DarkOrange3",
+            "DarkOrange4"
+        ],
+        "coral": [
+            "coral1",
+            "coral2",
+            "coral3",
+            "coral4"
+        ],
+        "tomato": [
+            "tomato1",
+            "tomato2",
+            "tomato3",
+            "tomato4"
+        ],
+        "OrangeRed": [
+            "OrangeRed1",
+            "OrangeRed2",
+            "OrangeRed3",
+            "OrangeRed4"
+        ],
+        "red": [
+            "red1",
+            "red2",
+            "red3",
+            "red4"
+        ]
+    },
+    "pink": {
+        "DeepPink": [
+            "DeepPink1",
+            "DeepPink2",
+            "DeepPink3",
+            "DeepPink4"
+        ],
+        "HotPink": [
+            "HotPink1",
+            "HotPink2",
+            "HotPink3",
+            "HotPink4"
+        ],
+        "pink": [
+            "pink1",
+            "pink2",
+            "pink3",
+            "pink4"
+        ],
+        "LightPink": [
+            "LightPink1",
+            "LightPink2",
+            "LightPink3",
+            "LightPink4"
+        ],
+        "PaleVioletRed": [
+            "PaleVioletRed1",
+            "PaleVioletRed2",
+            "PaleVioletRed3",
+            "PaleVioletRed4"
+        ],
+        "VioletRed": [
+            "VioletRed1",
+            "VioletRed2",
+            "VioletRed3",
+            "VioletRed4"
+        ]
+    },
+    "purple": {
+        "maroon": [
+            "maroon1",
+            "maroon2",
+            "maroon3",
+            "maroon4"
+        ],
+        "magenta": [
+            "magenta1",
+            "magenta2",
+            "magenta3",
+            "magenta4"
+        ],
+        "orchid": [
+            "orchid1",
+            "orchid2",
+            "orchid3",
+            "orchid4"
+        ],
+        "plum": [
+            "plum1",
+            "plum2",
+            "plum3",
+            "plum4"
+        ],
+        "MediumOrchid": [
+            "MediumOrchid1",
+            "MediumOrchid2",
+            "MediumOrchid3",
+            "MediumOrchid4"
+        ],
+        "DarkOrchid": [
+            "DarkOrchid1",
+            "DarkOrchid2",
+            "DarkOrchid3",
+            "DarkOrchid4"
+        ],
+        "purple": [
+            "purple1",
+            "purple2",
+            "purple3",
+            "purple4"
+        ],
+        "MediumPurple": [
+            "MediumPurple1",
+            "MediumPurple2",
+            "MediumPurple3",
+            "MediumPurple4"
+        ],
+        "thistle": [
+            "thistle1",
+            "thistle2",
+            "thistle3",
+            "thistle4"
+        ]
+    }
+}
