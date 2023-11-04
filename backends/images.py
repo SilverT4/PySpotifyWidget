@@ -2,6 +2,7 @@ import os, platform, warnings, random, string
 from urllib.request import urlretrieve
 from urllib import error
 from PIL import Image
+from .. import preferences
 home = os.path.expanduser("~")
 def generate_random_string(length):
     characters = string.ascii_letters + string.digits
@@ -28,7 +29,8 @@ def downloadImage(url):
         return dest
     except error.HTTPError:
         return None
-
+size = preferences.img_size,preferences.img_size
 def toTkImage(fname:str, widg):
-    img = Image.open(fname).resize((96,96))
+
+    img = Image.open(fname).resize(size)
     widg.paste(img)

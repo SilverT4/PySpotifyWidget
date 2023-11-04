@@ -7,10 +7,11 @@ except ImportError:
         from infoScreen import InfoScreen
     finally:
         print("a")
+from .. import preferences
 class PbarCustom(tk.Toplevel):
     def __init__(self, master=None, **cnf):
         super().__init__(master,cnf)
-        self.style = ttk.Style(master)
+        self.style = master.style
         self.exampleBar = ttk.Progressbar(self,value=50)
         self.exampleBar.grid(row=0,columnspan=999)
         tk.Label(self,text="filled bar colour:").grid(row=1,column=0)
@@ -94,9 +95,11 @@ class PaletteWindow(tk.Toplevel):
         self.destroy()
         
 class Window(tk.Tk):
-    def __init__(self, screenName: str | None = None, baseName: str | None = None, className: str = "spotify", useTk: bool = True, sync: bool = False, use: str | None = None) -> None:
+    def __init__(self, screenName: str | None = None, baseName: str | None = None, className: str = "spotify-widget", useTk: bool = True, sync: bool = False, use: str | None = None) -> None:
         super().__init__(screenName, baseName, className, useTk, sync, use)
-        self.tk_setPalette('#0a325e')
+        self.tk_setPalette(preferences.app_theme)
+        self.style = ttk.Style(self)
+        self.style.configure('Horizontal.TProgressbar',background=preferences.prog_fill,troughcolor=preferences.prog_trough,pbarrelief=preferences.prog_relief,troughrelief=preferences.prog_trough_relief)
         self.menubar = tk.Menu(self,type='menubar',name='system')
         self.paletteMenu = tk.Menu(self.menubar,type='normal',name='theming',tearoff=0)
         self.paletteMenu.add_command(label="overall appearance",command=self.openThemeWindow)
@@ -105,6 +108,9 @@ class Window(tk.Tk):
         self.configure(menu=self.menubar)
         self.iScreen = InfoScreen(self)
         self.iScreen.grid()
+        self.bind("<Configure>", self.reposition, '+')
+    def reposition(self,e=None):
+        self.geometry("+%d+%d" % (self.winfo_screenwidth()-self.winfo_reqwidth()-8,self.winfo_screenheight()-self.winfo_reqheight()-8))
     def openThemeWindow(self):
         wind = PaletteWindow(self)
         self.wait_window(wind)
