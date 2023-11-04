@@ -1,0 +1,9 @@
+Pillow>=10.0
+spotipy
+requests
+certifi
+urllib3
+charset-normalizer
+idna
+six
+redis
