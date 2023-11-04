@@ -1,0 +1,6 @@
+Create backend stuff for:
+    1. Caching images
+    2. Making API calls
+
+Create classes for everything.
+    (Should I do this all in one file...? It might make things a bit easier to handle, but it could also be a giant mess.)
