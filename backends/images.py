@@ -23,12 +23,14 @@ if not os.path.exists(cacheDir):
 
 def downloadImage(url):
     dest = os.path.join(cacheDir,os.path.basename(url))
-    try:
-        print("attempting to retrieve",url)
-        urlretrieve(url,dest)
-        return dest
-    except error.HTTPError:
-        return None
+    if not os.path.exists(dest):
+        try:
+            print("attempting to retrieve",url)
+            urlretrieve(url,dest)
+            return dest
+        except error.HTTPError:
+            return None
+    else: return dest # Don't download the same image multiple times.
 size = preferences.img_size,preferences.img_size
 def toTkImage(fname:str, widg):
 
