@@ -1,6 +1,6 @@
 from tkinter import ttk
 import tkinter as tk
-from requests.exceptions import ReadTimeout
+from requests import exceptions
 from PIL.ImageTk import PhotoImage
 from PIL import Image
 from ..backends import images, api
@@ -39,6 +39,7 @@ class InfoScreen(tk.Frame):
         self.pbar.grid(row=1,column=0,sticky='ew',columnspan=2)
         self.bind("<<RedownloadImage>>", self.redownload_image)
         self.retries = 0
+        self.retryButton = tk.Button(self, text="Retry", command=self.refresh)
         self.refresh()
 
     def redownload_image(self, e:tk.Event=None): # e is default to None for manual calls
@@ -107,13 +108,20 @@ class InfoScreen(tk.Frame):
                 else:
                     self.tk.call("wm","title",".","Custom Spotify Playback Widget")
             self.retries = 0 # reset the counter
+            self.retryButton.grid_forget()
             self.after(150, self.refresh)
-        except ReadTimeout:
+        except exceptions.Timeout:
             self._readTimeout()
+        except exceptions.ConnectionError:
+            self._connectionError()
     
+    def _connectionError(self):
+        self.infoText.set("Could not connect to Spotify\ndue to a connection error.\nCheck your connection, then\nclick below to retry.")
+        self.retryButton.grid(row=2,columnspan=2,sticky='ew')
+
     def _readTimeout(self):
         self.retries += 1
-        self.infoText.set("Could not connect to Spotify,\nread timed out.\nAttempt %d\nRetrying in 5..." % self.retries)
+        self.infoText.set("Could not connect to Spotify,\nwe got timed out.\nAttempt %d\nRetrying in 5..." % self.retries)
         _4 = "Could not connect to Spotify,\nread timed out.\nAttempt %d\nRetrying in 4..." % self.retries
         _3 = "Could not connect to Spotify,\nread timed out.\nAttempt %d\nRetrying in 3..." % self.retries
         _2 = "Could not connect to Spotify,\nread timed out.\nAttempt %d\nRetrying in 2..." % self.retries
