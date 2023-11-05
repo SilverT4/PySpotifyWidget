@@ -55,7 +55,7 @@ class PaletteWindow(tk.Toplevel):
 
     def ask_cus(self):
         color = colorchooser.askcolor(initialcolor=self.cget('bg'))
-        if color:
+        if color[1]:
             self.master.tk_setPalette(color[1])
             self.destroy()
     def show_gra(self):
