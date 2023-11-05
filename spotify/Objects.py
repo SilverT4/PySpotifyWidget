@@ -94,7 +94,7 @@ class Episode:
 class Album:
     """
     Represents a Spotify album. This object's fields are based off of the Spotify API documentation."""
-    def __init__(self, album_type:Literal['album','single','compilation'], total_tracks:int, href:str, id:str, images:list[dict[str,str|int]], name:str, release_date:str, release_date_precision:Literal['year','month','day'], type:Literal['album'], uri:str, external_urls:dict[str,str], artists:SimpleArtistList, copyrights:CopyrightObject = None, tracks:dict[str,str|dict|int] = None, is_playable = True, label:str = None, popularity:int=None,genres:list[str]=None,available_markets:list[str]=None):
+    def __init__(self, album_type:Literal['album','single','compilation'], total_tracks:int, href:str, id:str, images:list[dict[str,str|int]], name:str, release_date:str, release_date_precision:Literal['year','month','day'], type:Literal['album'], uri:str, external_urls:dict[str,str], artists:SimpleArtistList, copyrights:CopyrightObject = None, tracks:dict[str,str|dict|int] = None, is_playable = True, label:str = None, popularity:int=None,genres:list[str]=None,available_markets:list[str]=None, restrictions=None):
         self.name = name
         self.external_urls = external_urls
         self.album_type = album_type
@@ -112,7 +112,7 @@ class Album:
         self.popularity = popularity
         self.copyrights = copyrights
         self.artists = [SimplifiedArtistObject(**a) for a in artists]
-
+        self.restrictions = restrictions
 class Artist:
     def __init__(self, external_urls:dict[str,str], followers:dict[str,str|int], genres:list[str], href:str, id:str, images:list[dict[str,str|int]], name:str, popularity:int, type:Literal['artist'], uri:str):
         self.external_urls = external_urls
