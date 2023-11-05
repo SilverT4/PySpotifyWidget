@@ -4,6 +4,12 @@ This is a widget created in Python to display your current Spotify playback in a
 
 # Setup
 
+## Recommendations
+
+1. Due to how this project is currently set up, it creates a cache directory for album/episode images. This can help with the app's performance, as no threading takes place right now.
+    * I may make a "cleanup" script that cleans the cache directory. For now, if you (somehow) find that your storage device is running low on space and a major culprit is the cache directory, just delete everything in there. All of the image files can be redownloaded as needed.
+2. If you're running this on a smaller screen, make the image size in [preferences.py](preferences.py) smaller as needed.
+
 ## Installation requirements
 
 This script requires Python 3.8+, as well as the following libraries. A full list of required libraries can be found in [requirements.txt](requirements.txt)
