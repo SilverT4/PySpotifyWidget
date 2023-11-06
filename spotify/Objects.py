@@ -94,7 +94,7 @@ class Episode:
 class Album:
     """
     Represents a Spotify album. This object's fields are based off of the Spotify API documentation."""
-    def __init__(self, album_type:Literal['album','single','compilation'], total_tracks:int, href:str, id:str, images:list[dict[str,str|int]], name:str, release_date:str, release_date_precision:Literal['year','month','day'], type:Literal['album'], uri:str, external_urls:dict[str,str], artists:SimpleArtistList, copyrights:CopyrightObject = None, tracks:dict[str,str|dict|int] = None, is_playable = True, label:str = None, popularity:int=None,genres:list[str]=None,available_markets:list[str]=None, restrictions=None):
+    def __init__(self, album_type:Literal['album','single','compilation'], total_tracks:int, href:str, id:str, images:list[dict[str,str|int]], name:str, release_date:str, release_date_precision:Literal['year','month','day'], type:Literal['album'], uri:str, external_urls:dict[str,str], artists:SimpleArtistList, copyrights:CopyrightObject = None, tracks:dict[str,str|dict|int] = None, is_playable = True, label:str = None, popularity:int=None,genres:list[str]=None,available_markets:list[str]=None, restrictions=None, external_ids=None):
         self.name = name
         self.external_urls = external_urls
         self.album_type = album_type
@@ -127,7 +127,7 @@ class Artist:
         self.uri = uri
 
 class Playlist:
-    def __init__(self, collaborative:bool=None, description:str = None, external_urls = None, followers = None, href:str = None, id:str = None, images = None, name:str = None, owner = None, public:bool = None, snapshot_id:str = None, tracks = None, type:Literal['playlist'] = 'playlist', uri:str = None) -> None:
+    def __init__(self, collaborative:bool=None, description:str = None, external_urls = None, followers = None, href:str = None, id:str = None, images = None, name:str = None, owner = None, public:bool = None, snapshot_id:str = None, tracks = None, type:Literal['playlist'] = 'playlist', uri:str = None, primary_color=None) -> None:
         "since you can select fields with this one, all fields are optional.s"
         self.collaborative = collaborative
         self.description = description
@@ -135,6 +135,7 @@ class Playlist:
         self.followers = followers
         self.href = href
         self.id = id
+        self.primary_color = primary_color
         if images:
             self.images = [Image(**i) for i in images]
         else:
