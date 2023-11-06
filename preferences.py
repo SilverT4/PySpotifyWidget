@@ -44,7 +44,7 @@ img_size:Literal[32,64,96,128,256] = 128
 app_theme:Color = '#0a325e'
 prog_fill:Color = '#a6d388'
 prog_trough:Color = '#111111'
-prog_relief:Relief = 'flat'
+prog_relief:Relief = 'groove'
 "i'll add a thing in the pbar window later on"
 prog_trough_relief:Relief = 'flat'
 window_title_mode:TitleMode = 'item'
@@ -71,4 +71,4 @@ This mode lets you use a custom window title, regardless of what's playing.
 This just uses the default "Playback Widget" title.
 
 """
-custom_title:str = ""
+custom_title:str = "it's called, the tango maureen"
