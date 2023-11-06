@@ -11,11 +11,11 @@ from .. import preferences
 def formatTime(progress:int, duration:int|None = None):
     p_s, p_ms = divmod(progress, 1000)
     p_m, p_s = divmod(p_s, 60)
-    progStr = "%d:%s" % (p_m, p_s if p_s > 10 else '0%d' % p_s)
+    progStr = "%d:%s" % (p_m, '0%d' % p_s if p_s < 10 else '%d' % p_s)
     if duration:
         d_s, d_ms = divmod(duration,1000)
         d_m, d_s = divmod(d_s, 60)
-        duraStr = "%d:%s" % (d_m, d_s if d_s > 10 else '0%d' % d_s)
+        duraStr = "%d:%s" % (d_m, '0%d' % d_s if d_s < 10 else '%d' % d_s)
         return "%s / %s" % (progStr,duraStr)
     return '%s elapsed' % progStr
 
